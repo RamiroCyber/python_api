@@ -1,5 +1,4 @@
 
-#teste
 name: Docker Image CI
 
 on:
@@ -18,8 +17,8 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag RamiroCyber/python_api:$(date +%y-%m-%d_%H-%M)
+      run: docker build . --file Dockerfile --tag ramiroribeiro/python_api:$(date +%y-%m-%d_%H-%M)
     - name: Docker push
-      run: docker push RamiroCyber/python_api:$(date +%y-%m-%d_%H-%M)
+      run: docker push ramiroribeiro/python_api:$(date +%y-%m-%d_%H-%M)
 
 
